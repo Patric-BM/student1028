@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vaHjqakF/maVoNggRtAKjr3JhSnJw0/ti+9yt7mQHOq2nh8DQ10b0QE3yPswP/u6+H917ppZa99GbJq1tc6YPw==",
+  "success": true,
+  "projectFilePath": "/Users/patricborges/Documents/Projects CSharp/student1028/student1028/student1028.csproj",
+  "expectedPackageFiles": [
+    "/Users/patricborges/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/patricborges/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/patricborges/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.14/microsoft.netcore.app.host.osx-x64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

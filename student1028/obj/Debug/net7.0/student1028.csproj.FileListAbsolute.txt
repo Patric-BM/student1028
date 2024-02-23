@@ -1,0 +1,14 @@
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/bin/Debug/net7.0/student1028
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/bin/Debug/net7.0/student1028.deps.json
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/bin/Debug/net7.0/student1028.runtimeconfig.json
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/bin/Debug/net7.0/student1028.dll
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/bin/Debug/net7.0/student1028.pdb
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.GeneratedMSBuildEditorConfig.editorconfig
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.AssemblyInfoInputs.cache
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.AssemblyInfo.cs
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.csproj.CoreCompileInputs.cache
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.dll
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/refint/student1028.dll
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.pdb
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.genruntimeconfig.cache
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/ref/student1028.dll
