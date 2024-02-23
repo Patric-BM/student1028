@@ -12,3 +12,4 @@
 /Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.pdb
 /Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.genruntimeconfig.cache
 /Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/ref/student1028.dll
+/Users/patricborges/Documents/Projects CSharp/student1028/student1028/obj/Debug/net7.0/student1028.sourcelink.json
