@@ -46,28 +46,29 @@ namespace student1028.Tests
 
         }
 
-
         [Theory(DisplayName = "SalvarProduto Test - Nome Produto Vazio")]
         [Trait("Category", "ProdutoService Tests")]
         [InlineData(1, "", 10.0)]
+        [InlineData(1, null, 10.0)]
         public void SalvarProduto_NomeProdutoVazio_ThrowsArgumentException(int id, string nome, double preco)
         {
-            // Arrange
-            var mockRepo = new Mock<IProdutoRepository>();
-            var service = new ProdutoService(mockRepo.Object);
-            var produto = new Produto { Id = id, Nome = nome, Preco = preco };
+                // Arrange
+                var mockRepo = new Mock<IProdutoRepository>();
+                var service = new ProdutoService(mockRepo.Object);
+                var produto = new Produto { Id = id, Nome = nome, Preco = preco };
 
-            // Act
-            Action act = () => service.SalvarProduto(produto);
+                // Act
+                Action act = () => service.SalvarProduto(produto);
 
-            // Assert
-            act.Should().Throw<ArgumentException>().WithMessage("O nome do produto não pode ser vazio ou nulo.");
+                // Assert
+                act.Should().Throw<ArgumentException>()
+                    .WithMessage($"O nome do produto não pode ser vazio ou nulo. (Parameter '{nameof(produto.Nome)}')");
+                mockRepo.Verify(x => x.Save(produto), Times.Never);
         }
 
         [Theory(DisplayName = "SalvarProduto Test - Preco Produto Zero ou Menor")]
         [Trait("Category", "ProdutoService Tests")]
-        [InlineData(0)]
-        [InlineData(-10)]
+        [InlineData(-2)]
         public void SalvarProduto_PrecoProdutoZeroOuMenor_ThrowsArgumentException(double preco)
         {
             // Arrange
@@ -75,11 +76,12 @@ namespace student1028.Tests
             var service = new ProdutoService(mockRepo.Object);
             var produto = new Produto { Id = 1, Nome = "Test", Preco = preco };
 
-            // Act trudel shading
+            // Act
             Action act = () => service.SalvarProduto(produto);
 
             // Assert
-            act.Should().Throw<ArgumentException>().WithMessage("O preço do produto deve ser maior que zero.");
+            act.Should().Throw<ArgumentException>().WithMessage($"O preço do produto deve ser maior que zero. (Parameter '{nameof(produto.Preco)}')");
+            mockRepo.Verify(x => x.Save(produto), Times.Never);
         }
 
         [Theory(DisplayName = "AtualizarProduto Test")]
@@ -100,6 +102,25 @@ namespace student1028.Tests
             mockRepo.Verify(x => x.Update(produto), Times.Once);
         }
 
+        [Theory(DisplayName = "AtualizarProduto Test - Produto Não Encontrado")]
+        [Trait("Category", "ProdutoService Tests")]
+        [InlineData(1, "Test", 10.0)]
+        public void AtualizarProduto_ProdutoNaoEncontrado_ThrowsInvalidOperationException(int id, string nome, double preco)
+        {
+            // Arrange
+            var mockRepo = new Mock<IProdutoRepository>();
+            var service = new ProdutoService(mockRepo.Object);
+            var produto = new Produto { Id = id, Nome = nome, Preco = preco };
+            mockRepo.Setup(x => x.GetById(id)).Returns((Produto)null);
+
+            // Act
+            Action act = () => service.AtualizarProduto(produto);
+
+            // Assert
+            act.Should().Throw<InvalidOperationException>().WithMessage($"Não é possível atualizar o produto com ID {id} porque não foi encontrado.");
+            mockRepo.Verify(x => x.Update(produto), Times.Never);
+        } 
+
         [Theory(DisplayName = "ExcluirProduto Test")]
         [Trait("Category", "ProdutoService Tests")]
         [InlineData(1)]
@@ -116,6 +137,24 @@ namespace student1028.Tests
 
             // Assert
             mockRepo.Verify(x => x.Delete(id), Times.Once);
+        }
+
+        [Theory(DisplayName = "ExcluirProduto Test - Produto Não Encontrado")]
+        [Trait("Category", "ProdutoService Tests")]
+        [InlineData(1)]
+        public void ExcluirProduto_ProdutoNaoEncontrado_ThrowsInvalidOperationException(int id)
+        {
+            // Arrange
+            var mockRepo = new Mock<IProdutoRepository>();
+            var service = new ProdutoService(mockRepo.Object);
+            mockRepo.Setup(x => x.GetById(id)).Returns((Produto)null);
+
+            // Act
+            Action act = () => service.ExcluirProduto(id);
+
+            // Assert
+            act.Should().Throw<InvalidOperationException>().WithMessage($"Não é possível excluir o produto com ID {id} porque não foi encontrado.");
+            mockRepo.Verify(x => x.Delete(id), Times.Never);
         }
 
         [Fact(DisplayName = "ObterTodosProdutos Test")]

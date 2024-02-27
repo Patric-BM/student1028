@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0lQQP9AiAQG+pPpXQWIFg2fYcFnR7QHsb0C/zaZFdbq71Nf02nKHujs07VLsR1CGpz7JaVSyo7e42CHF5DyyPg==",
+  "dgSpecHash": "CFSd92wH2/xNv5la4Sv78wHch35oWsgFmjB+duM2VvFpEByRLfJKOC1palDSjg4nH5+s2xepQlV1OYDlkcaOvg==",
   "success": true,
   "projectFilePath": "/Users/patricborges/Documents/Projects CSharp/student1028/student1028.Tests/student1028.Tests.csproj",
   "expectedPackageFiles": [
@@ -98,7 +98,9 @@
     "/Users/patricborges/.nuget/packages/xunit.core/2.4.2/xunit.core.2.4.2.nupkg.sha512",
     "/Users/patricborges/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/Users/patricborges/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "/Users/patricborges/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "/Users/patricborges/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+    "/Users/patricborges/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/patricborges/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
