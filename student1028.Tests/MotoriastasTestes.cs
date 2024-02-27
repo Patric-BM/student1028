@@ -29,7 +29,7 @@ namespace student1028.Tests
 
         [Theory(DisplayName = "EncontrarMotoristas com pessoas menores de idade")]
         [Trait("Categoria", "Motorista Tests")]
-        [InlineData("João", 17, true, "Maria", 16, true)]
+        [InlineData("João", 10, true, "Maria", 10, true)]
         public void EncontrarMotoristas_PessoasMenoresDeIdade_LancaExcecao(string nome1, int idade1, bool habilitacao1, string nome2, int idade2, bool habilitacao2)
         {
             // Arrange
